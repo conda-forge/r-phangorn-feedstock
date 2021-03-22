@@ -33,8 +33,8 @@ requirements:
   host:
     - r-base
     - r-matrix
-    - r-rcpp >=0.12.0
-    - r-ape >=5.0
+    - r-rcpp >=1.0.4
+    - r-ape >=5.4
     - r-fastmatch
     - r-igraph >=1.0
     - r-magrittr
@@ -43,8 +43,8 @@ requirements:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix
-    - r-rcpp >=0.12.0
-    - r-ape >=5.0
+    - r-rcpp >=1.0.4
+    - r-ape >=5.4
     - r-fastmatch
     - r-igraph >=1.0
     - r-magrittr
@@ -57,10 +57,11 @@ test:
 
 about:
   home: https://github.com/KlausVigo/phangorn
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: 'Package contains methods for estimation of phylogenetic trees and networks using Maximum Likelihood, Maximum Parsimony, distance methods and Hadamard conjugation. Allows to compare trees, models selection and offers visualizations for trees and split networks. '
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
