@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,6 +39,7 @@ requirements:
     - r-igraph >=1.0
     - r-magrittr
     - r-quadprog
+    - libblas
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
