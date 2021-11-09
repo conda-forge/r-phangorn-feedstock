@@ -1,4 +1,4 @@
-{% set version = "2.7.1" %}
+{% set version = "2.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/phangorn_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/phangorn/phangorn_{{ version }}.tar.gz
-  sha256: d8a9d67851f16c3947575eb3344b9ce7ef856354e691211ef23c92b7889e1398
+  sha256: 9021ef35f51d67ed2a956b12048883b8de1b928471b9c535bc8c915a98a3e5dd
 
 build:
   merge_build_host: true  # [win]
