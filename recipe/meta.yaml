@@ -23,13 +23,12 @@ build:
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-igraph                   # [build_platform != target_platform]
-    - r-quadprog                 # [build_platform != target_platform]
-    - r-fastmatch                # [build_platform != target_platform]
     - r-matrix                   # [build_platform != target_platform]
-    - r-magrittr                 # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
     - r-ape                      # [build_platform != target_platform]
+    - r-fastmatch                # [build_platform != target_platform]
+    - r-igraph                   # [build_platform != target_platform]
+    - r-quadprog                 # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
@@ -42,23 +41,24 @@ requirements:
   host:
     - r-base
     - r-matrix
-    - r-rcpp >=1.0.4
-    - r-ape >=5.4
+    - r-rcpp
+    - r-ape >=5.5
     - r-fastmatch
+    - r-generics
     - r-igraph >=1.0
-    - r-magrittr
     - r-quadprog
     - libblas
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix
-    - r-rcpp >=1.0.4
-    - r-ape >=5.4
+    - r-rcpp
+    - r-ape >=5.5
     - r-fastmatch
+    - r-generics
     - r-igraph >=1.0
-    - r-magrittr
     - r-quadprog
+
 
 test:
   commands:
