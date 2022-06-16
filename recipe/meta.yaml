@@ -1,4 +1,4 @@
-{% set version = "2.8.1" %}
+{% set version = "2.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/phangorn_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/phangorn/phangorn_{{ version }}.tar.gz
-  sha256: 6d471410ae29775104a94746936e8c1c54c7273dd289333973ec06dad489dc75
+  sha256: 3262dbe002bedc636467d4ac77044965f4976da09fa710c606075c5ddf26da23
 
 build:
   merge_build_host: true  # [win]
@@ -23,13 +23,12 @@ build:
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-igraph                   # [build_platform != target_platform]
-    - r-quadprog                 # [build_platform != target_platform]
-    - r-fastmatch                # [build_platform != target_platform]
     - r-matrix                   # [build_platform != target_platform]
-    - r-magrittr                 # [build_platform != target_platform]
     - r-rcpp                     # [build_platform != target_platform]
     - r-ape                      # [build_platform != target_platform]
+    - r-fastmatch                # [build_platform != target_platform]
+    - r-igraph                   # [build_platform != target_platform]
+    - r-quadprog                 # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
@@ -42,22 +41,22 @@ requirements:
   host:
     - r-base
     - r-matrix
-    - r-rcpp >=1.0.4
-    - r-ape >=5.4
+    - r-rcpp
+    - r-ape >=5.5
     - r-fastmatch
+    - r-generics
     - r-igraph >=1.0
-    - r-magrittr
     - r-quadprog
     - libblas
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix
-    - r-rcpp >=1.0.4
-    - r-ape >=5.4
+    - r-rcpp
+    - r-ape >=5.5
     - r-fastmatch
+    - r-generics
     - r-igraph >=1.0
-    - r-magrittr
     - r-quadprog
 
 test:
