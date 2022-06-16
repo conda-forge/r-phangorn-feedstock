@@ -59,7 +59,6 @@ requirements:
     - r-igraph >=1.0
     - r-quadprog
 
-
 test:
   commands:
     - $R -e "library('phangorn')"           # [not win]
