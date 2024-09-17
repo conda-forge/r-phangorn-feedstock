@@ -1,4 +1,4 @@
-{% set version = "2.11.1" %}
+{% set version = "2.12.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/phangorn_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/phangorn/phangorn_{{ version }}.tar.gz
-  sha256: 10096ecae03e118aa4dbc60d9866175fad4849c948e004cf10c3868e3feed420
+  sha256: 9dc59c7806b4ba5d2d168d0504fdd5a10778aa24ef2c7014af92c3a2f1fe9ee7
 
 build:
-  number: 2
+  number: 0
   skip: true  # [r_base == "4.0"]
   rpaths:
     - lib/R/lib/
