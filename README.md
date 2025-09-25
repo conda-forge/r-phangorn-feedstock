@@ -252,8 +252,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@ArneKr](https://github.com/ArneKr/)
-* [@FrodePedersen](https://github.com/FrodePedersen/)
 * [@MathiasHaudgaard](https://github.com/MathiasHaudgaard/)
 * [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 
